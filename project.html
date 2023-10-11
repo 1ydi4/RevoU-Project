@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.8">
+        <link rel="stylesheet" href="CSS/style.css">
+        <script scr="JS/script.js"></script>
+        <title>Celsius to Fahrenheit Conversion</title>
+    </head>
+    <body>
+        <header>
+            <h1>Kalkulator Suhu</h1>
+            <h2>Celsius</h2>
+        </header>
+        <main>
+            <section class="input-section">
+                <label for="input-celcius">Celcius</label>
+                <input id="input-celcius" type="number" placeholder="0">
+                <div id="input-button">
+                    <button onclick="Convertion()">Convertion</button>
+                    <button onclick="Reset()">Reset</button>
+                    <button onclick="Reverse()">Reverse</button>
+                </div>
+                <label for="input-farenheit">Farenheit</label>
+                <input id="input-farenheit" type="number" placeholder="0">
+                
+            </section>
+        </main>
+        <script>
+            function Convertion(){
+                let celcius = document.getElementById("input-celcius").value
+                
+                let convertionResult = parseInt(celcius) * 1.8 + parseInt(32)
+
+                console.log(convertionResult)
+            }
+        </script>
+    </body>
+</html>
